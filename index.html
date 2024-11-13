@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Voluntarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="encabezado"></div>
+        
+        <div id="exito" class="gracias">
+            <h2>¡Gracias por tu interés en ser voluntario!</h2>
+            <p>Nos pondremos en contacto contigo pronto.</p>
+        </div>
+
+        <form action="#exito" method="GET">
+            <h1>Registro de Voluntarios</h1>
+            
+            <div class="grupo">
+                <label class="requerido" for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" required minlength="8" maxlength="22">
+            </div>
+
+            <div class="grupo">
+                <label class="requerido" for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+
+            <div class="grupo">
+                <label class="requerido" for="telefono">Número de teléfono</label>
+                <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{10}">
+            </div>
+
+            <div class="grupo">
+                <label class="requerido" for="area">Área de interés</label>
+                <select id="area" name="area" required>
+                    <option value="">Seleccione un área</option>
+                    <option value="educacion">Educación</option>
+                    <option value="animales">Animales</option>
+                    <option value="ambiente">Medio Ambiente</option>
+                    <option value="salud">Salud</option>
+                    <option value="social">Apoyo Social</option>
+                </select>
+            </div>
+
+            <div class="grupo">
+                <label class="requerido">Día disponible</label>
+                <div class="grupo-dias">
+                    <div class="opcion-dia">
+                        <input type="radio" id="lunes" name="dia" value="lunes" required>
+                        <label for="lunes">Lunes</label>
+                    </div>
+                    <div class="opcion-dia">
+                        <input type="radio" id="martes" name="dia" value="martes">
+                        <label for="martes">Martes</label>
+                    </div>
+                    <div class="opcion-dia">
+                        <input type="radio" id="miercoles" name="dia" value="miercoles">
+                        <label for="miercoles">Miércoles</label>
+                    </div>
+                    <!-- Agrega más días según sea necesario -->
+                </div>
+            </div>
+
+            <div class="grupo">
+                <label for="experiencia">Experiencia previa</label>
+                <textarea id="experiencia" name="experiencia" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="photo">Foto de perfil</label>
+                <input type="file" id="photo" name="photo" accept="image/*" class="file-input">
+            </div>
+
+            <div class="checkbox-terminos">
+                <input type="checkbox" id="terminos" name="terminos" required>
+                <label class="requerido" for="terminos">Acepto los términos y condiciones</label>
+            </div>
+
+            <button type="submit" class="boton-enviar">Enviar registro</button>
+        </form>
+    </div>
+</body>
+</html>

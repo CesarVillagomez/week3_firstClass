@@ -1,0 +1,123 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.contenedor {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.encabezado {
+    height: 8px;
+    background: #4ECDC4;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.grupo {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.grupo-dias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.opcion-dia {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.opcion-dia input[type="radio"] {
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.boton-enviar {
+    background: #4ECDC4;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.boton-enviar:hover {
+    background: #3bb5a0;
+}
+
+.requerido::after {
+    content: " *";
+    color: red;
+}
+
+.checkbox-terminos {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.gracias {
+    text-align: center;
+    padding: 20px;
+    display: none;
+}
+
+#exito:target .gracias {
+    display: block;
+}
+
+#exito:target form {
+    display: none;
+}
